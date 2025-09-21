@@ -1,15 +1,15 @@
-import "./App.css";
-import useGlobalStore from "./Store";
+import { Suspense } from "react";
+import { BrowserRouter } from "react-router-dom";
+import Loading from "./components/Loading";
+import CustomRoutes from "./routes";
 
 const App = () => {
-  const { isLogin, setIsLogin } = useGlobalStore();
-
   return (
-    <div>
-      <button onClick={() => setIsLogin(!isLogin)}>
-        {isLogin ? "로그아웃" : "로그인"}
-      </button>
-    </div>
+    <BrowserRouter>
+      <Suspense fallback={<Loading />}>
+        <CustomRoutes />
+      </Suspense>
+    </BrowserRouter>
   );
 };
 

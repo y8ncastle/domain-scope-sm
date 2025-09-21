@@ -1,0 +1,39 @@
+/* Font */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"); /* Pretendard */
+
+* { padding: 0; margin: 0; box-sizing: border-box; font-family: "Pretendard", sans-serif; font-size: 16px; font-weight: 400; line-height: 1; color: white; } 
+
+html, body { width: 100vw; height: 100vh; background: linear-gradient(180deg, #2F2F2F 0%, #272937 100%); } 
+h1 { font-size: 24px; font-weight: 700; } 
+h2 { font-size: 20px; } 
+h3 { font-size: 18px; font-weight: 500; } 
+button { cursor: pointer; border: none; } 
+button:focus { outline: none; } 
+
+.loading { width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; } 
+
+main { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 100px 0; } 
+main h2 { margin: 24px 0 44px; } 
+main .each-side-container { width: 820px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; } 
+
+.each-side { width: 400px; background: #4F515B; border: 1px solid #929292; border-radius: 10px; padding: 28px 28px 44px; display: flex; flex-direction: column; align-items: center; } 
+.each-side.active { border-color: #24DD37; } 
+.each-side h3 { color: #9FA4BC; margin-bottom: 36px; } 
+.each-side .each-line { width: 100%; height: 40px; display: flex; align-items: center; justify-content: space-between; } 
+.each-side .each-line span:first-of-type { font-weight: 700; } 
+.each-side .each-line div { width: 213px; height: 40px; background-color: #40424A; display: flex; align-items: center; padding: 0 16px; border-radius: 5px; color: #A7ABBD; font-weight: 400; } 
+.each-side .each-line:first-of-type { margin-bottom: 24px; } 
+
+footer { width: 820px; display: flex; flex-direction: column; align-items: center; background: linear-gradient(90.21deg, #5D45BF 0%, #DA3814 100%); border-radius: 10px; padding: 20px 28px; } 
+footer p { width: 100%; line-height: 24px; margin-bottom: 24px; } 
+footer .button-line { width: 100%; display: flex; align-items: center; justify-content: center; } 
+footer .button-line button { height: 44px; background-color: #282A36; display: flex; align-items: center; padding: 0 32px; border-radius: 10px; font-weight: 700; } 
+footer .button-line button:not(last-of-type) { margin-right: 20px; } 
+footer .button-line button:hover { background-color: #2F323F; } 
+
+@media (max-width: 1120px) { main { min-width: 1120px; } 
+ }
+
+ @media (max-height: 700px) { html, body { min-height: 700px; } 
+ main { min-height: 700px; } 
+ }
